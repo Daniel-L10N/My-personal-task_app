@@ -4,4 +4,4 @@ from .api import TaskViewSet
 router = routers.DefaultRouter()
 router.register('api/tasks', TaskViewSet, 'task')
 
-urlpatterns = router.uurls
+urlpatterns = router.urls
