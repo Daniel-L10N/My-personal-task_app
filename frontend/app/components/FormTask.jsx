@@ -20,7 +20,7 @@ function FormTask() {
     })
     const data = await res.json()
     console.log(data)
-    console.log(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tasks/`)
+
 
   };
 
