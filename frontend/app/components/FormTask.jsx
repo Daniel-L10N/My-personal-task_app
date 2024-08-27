@@ -11,7 +11,7 @@ function FormTask() {
     e.preventDefault();
     console.log(title, description);
 
-    const res= await fetch('http://localhost:8000/api/tasks/',{
+    const res= await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tasks/`,{
       method: 'POST',
       body: JSON.stringify({title, description}),
       headers: {
@@ -20,6 +20,7 @@ function FormTask() {
     })
     const data = await res.json()
     console.log(data)
+    console.log(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tasks/`)
 
   };
 
