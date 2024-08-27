@@ -1,27 +1,32 @@
-'use client'
+"use client";
 import { useState } from "react";
+// para refrescar los datos y hacer peticiones al backend
 
-useState;
+import { useRouter } from "next/navigation";
 
 function FormTask() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(title, description);
 
-    const res= await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tasks/`,{
-      method: 'POST',
-      body: JSON.stringify({title, description}),
-      headers: {
-        'Content-Type': 'application/json'
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tasks/`,
+      {
+        method: "POST",
+        body: JSON.stringify({ title, description }),
+        headers: {
+          "Content-Type": "application/json",
+        },
       }
-    })
-    const data = await res.json()
-    console.log(data)
-
-
+    );
+    const data = await res.json();
+    console.log(data);
+    router.refresh();
+    console.log(router.refresh());
   };
 
   return (
