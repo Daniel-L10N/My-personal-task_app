@@ -34,7 +34,7 @@ async function ListTask() {
             <button className="bg-red-600 text-white rounded-md py-1 px-2">
               Eliminar
             </button>
-            <button className="bg-indigo-600 text-white rounded-md py-1 px-2">
+            <button className="bg-indigo-700 text-white rounded-md py-1 px-2">
               Actualizar
             </button>
           </div>
