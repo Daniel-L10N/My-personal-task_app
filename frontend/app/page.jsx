@@ -1,8 +1,7 @@
 import FormTask from "./components/FormTask";
 import ListTask from "./components/ListTask";
 
-export const dynamic = "force-dynamic";
-
+export const dynamic = 'force-dynamic';
 export default function HomePage() {
   dynamic;
   return (

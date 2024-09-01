@@ -26,7 +26,6 @@ function FormTask() {
     const data = await res.json();
     console.log(data);
     router.refresh();
-    console.log(router.refresh());
   };
 
   return (
@@ -53,7 +52,9 @@ function FormTask() {
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
 
-        <button className="bg-indigo-500 rounded-md w-full text-white block p-1">
+        <button className="bg-indigo-500 rounded-md w-full text-white block p-1"
+        
+        >
           Save
         </button>
       </form>
